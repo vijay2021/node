@@ -1,11 +1,5 @@
-var firstname = 'Gupta';
-
-(function(lastname){
-    var firstname = 'vijay';
-    console.log(firstname);
-    console.log(lastname);
-}('Gupta'))
+var lang = require('./language');
 
 
-
-console.log(firstname);
+lang.english();
+lang.spanish();
