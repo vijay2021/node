@@ -1,12 +1,21 @@
-var person = {
-    firstname:'Vijay',
-    lastname:'Gupta',
-    welcome: function(){
-        console.log(this.firstname+" "+this.lastname);
-    }
+function person(firstname, lastname){
+    this.firstname = firstname;
+    this.lastname = lastname;
+}
+
+person.prototype.welcome = function(){
+    console.log("Welcome, "+ this.firstname +" "+ this.lastname);
 }
 
 
-person.welcome();
+var john = new person('Vijay','Gupta');
+console.log("Hello, "+ john.firstname+" "+john.lastname);
 
-console.log(person['firstname']);
+john.welcome();
+
+var jene = new person('Ram', 'Kumar');
+
+jene.welcome();
+
+console.log(john.__proto__);
+console.log(jene.__proto__);
